@@ -1,0 +1,94 @@
+#header {
+  background-color: #4e555b;
+}
+.img {
+  width: 20%;
+  float: right;
+}
+#h1 {
+  color: #7676e1;
+}
+#h3 {
+  color: #8b8be6;
+}
+#p {
+  color: #a0a0ea;
+}
+#res {
+  text-align: center;
+  background-color: #cacaf3;
+}
+#col {
+  width: 50%;
+  height: 60%;
+  background-color: #f3f3fd;
+}
+#par {
+  background-color: #cacaf3;
+}
+.bg-grey-lightest {
+  color: #4e555b;
+}
+.bg {
+  background-color: #cacaf3;
+}
+.overflow-scroll {
+  color: lightgoldenrodyellow;
+}
+.col-6 {
+  border: 0.5px solid #cacaf3;
+}
+.container {
+  margin-top: 10px;
+}
+#b1 {
+  border-top: 2px solid #d0ff33;
+}
+#b2 {
+  border-top: 2px solid #ff5252;
+}
+#b3 {
+  border-top: 2px solid #ff5252;
+}
+.matn {
+  font-size: small;
+  margin: 5px 5px ;
+}
+#btn {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 2px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+.dark-mode {
+  background-color: #202427;
+  color: #cbcbcb;
+}
+.dark-mode #par {
+  background-color: #cbcbcb;
+  color: #202427;
+}
+.dark-mode #res {
+  background-color: #cbcbcb;
+  color: #202427;
+}
+.dark-mode #h1 {
+  color: #cbcbcb;
+}
+.dark-mode #h3 {
+  color: #cbcbcb;
+}
+.dark-mode #p {
+  color: #cbcbcb;
+}
+/*# sourceMappingURL=test.css.map */

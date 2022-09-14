@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body class="body">
+<div class="fixed-header"id="header-wrap" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img" src="https://rotic.ir/images/logo/Dark.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="btn" onclick="myFunction()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+</button>
+<input type="hidden" id="theme" value="light">
+<div class="container">
+
+    <div class="mb-10 text-center">
+        <h1 id="h1">Our Chat Bot Public API</h1>
+        <a href class="mb-5 text-white no-underline"></a>
+        <p class="mt-5 mb-5" id="p">Use the new chatbot public API easily!</p>
+    </div>
+
+    <div class="mb-5 text-center">
+        <h3 id="h3">Endpoints</h3>
+    </div>
+    <div>
+        <div class="row p-3" id="par">
+
+                <div class="col-lg-6 col-md-12 col-sm-6 text-center" >Parameters</div>
+                <div class="col-lg-6 col-md-12 col-sm-6 text-center">Stutus</div>
+
+        </div>
+        <div class="row p-3 ">
+            <div class="col-lg-6 col-md-12 col-sm-6 text-center">data</div>
+            <div class="col-lg-6 col-md-12 col-sm-6 text-center">required</div>
+        </div>
+        <div class="row p-3 ">
+            <div class="col-md-6 col-sm-6 text-center">api</div>
+            <div class="col-md-6 col-sm-6 text-center">required</div>
+        </div>
+        <div class="row p-3 ">
+            <div class="col-md-6 col-sm-6 text-center">uniqueToken</div>
+            <div class="col-md-6 col-sm-6 text-center">optional</div>
+        </div>
+        <div class="row p-3 ">
+            <div class="col-md-6 col-sm-6 text-center">user_data</div>
+            <div class="col-md-6 col-sm-6 text-center">optional</div>
+        </div>
+    </div>
+    <br>
+    <div class="col-sm-12 p-2 " id="res">Responses</div>
+
+    <div class="container">
+        <div class="row align-items-start" id="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 " id="b1">
+                <div>
+                    <div class="p-1 text-grey text-sm border-l">
+                        Code: 200
+                    </div>
+                    <div class="p-1 text-grey text-sm border-l">
+                        Success
+                    </div>
+                    <div class="matn">If everything is OK, the response contains a text as your answer for users.</div>
+                </div>
+                <div class="bg-dark text-sm">
+                             <pre class="json overflow-scroll">
+                                 {
+                                    "provider": {
+                                        "website": "https://rotic.ir",
+                                        "source": "AI Core V3"
+                                    },
+                                    "response": "Answer",
+                                    "status": true,
+                                    "error": {
+                                        "code": null,
+                                        "message": null
+                                    }
+                               }
+                             </pre>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 " id="b2">
+                <div>
+                    <div class=" p-1 text-grey text-sm border-l">
+                        Code: 500
+
+                    </div>
+                    <div class=" p-1 text-grey text-sm border-l">
+                        0037
+                    </div>
+                    <div class="matn">If you forgot to send the valid API parameter, it will cause this error code.</div>
+                    <div class="bg-dark text-sm">
+                             <pre class="json overflow-scroll">
+                                 {
+                                    "provider": {
+                                        "website": "https://rotic.ir",
+                                        "source": "AI Core V3"
+                                    },
+                                    "response": null,
+                                    "status": false,
+                                    "error": {
+                                        "code": 31,
+                                        "message": "API key is not provided"
+                                    }
+                                }
+                             </pre>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 " id="b3">
+                <div>
+                    <div class=" p-1 text-grey text-sm border-l">
+                        Code: 401
+                    </div>
+                    <div class=" p-1 text-grey text-sm border-l">
+                        401
+                    </div>
+                    <div class="matn">If your plan is not enterprise you cannot use the public API <br></div>
+                    <div class="bg-dark text-sm">
+                             <pre class="json overflow-scroll">
+                                {
+                                    "provider": {
+                                        "website": "https://rotic.ir",
+                                        "source": "AI Core V3"
+                                    },
+                                    "response": null,
+                                    "status": false,
+                                    "error": {
+                                        "code": 401,
+                                        "message": "Buy our enterprise plans"
+                                    }
+                                }
+                             </pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+    $("#btn").click(function () {
+        var light = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>';
+        var dark = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"/></svg>';
+        if ($('#theme').val() == 'dark') {
+            $('#theme').val('light');
+            $('.img').attr('src','https://rotic.ir/images/logo/Dark.png');
+            $('#btn').empty().append(light);
+        } else {
+            $('#theme').val('dark');
+            $('.img').attr('src','https://rotic.ir/images/logo/White.png');
+            $('#btn').empty().append(dark);
+
+        }
+    })
+
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+
+
+    }
+</script>
+</body>
+</html>
